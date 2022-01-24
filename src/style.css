@@ -1,0 +1,3 @@
+.score-list > li:nth-child(even) {
+  background-color: #dddddd;
+}

@@ -10,8 +10,10 @@
 </head>
 
 <body>
-  <div>
-    <h1>Leaderboard</h1>
+  <div class="whole-page">
+    <div class="p-3">
+      <h1 class="display-4 fw-bolder">Leaderboard</h1>
+    </div>
     <div class="container bg-info">
       <div class="row">
         <div class="col">
@@ -21,22 +23,22 @@
           </div>
           <div class="score-list-container py-3">
             <ul class="score-list border border-2 border-dark list-unstyled">
-              <li class="ps-3 py-1 bg-danger">
+              <li class="ps-3 py-1">
                 <p class="name m-0">[NAME]: [SCORE]</p>
               </li>
-              <li class="ps-3 bg-secondary">
+              <li class="ps-3 py-1">
                 <p class="name m-0">[NAME]: [SCORE]</p>
               </li>
-              <li class="ps-3 bg-danger">
+              <li class="ps-3 py-1">
                 <p class="name m-0">[NAME]: [SCORE]</p>
               </li>
-              <li class="ps-3 bg-secondary">
+              <li class="ps-3 py-1">
                 <p class="name m-0">[NAME]: [SCORE]</p>
               </li>
-              <li class="ps-3 bg-danger">
+              <li class="ps-3 py-1">
                 <p class="name m-0">[NAME]: [SCORE]</p>
               </li>
-              <li class="ps-3 bg-secondary">
+              <li class="ps-3 py-1">
                 <p class="name m-0">[NAME]: [SCORE]</p>
               </li>
             </ul>
@@ -44,7 +46,13 @@
         </div>
         <div class="col">
           <h2>Add your score</h2>
-
+          <form class="d-flex flex-column py-3">
+            <input type="text" name="name" id="name" class="border border-2 border-dark p-1 mb-3" placeholder="Your name">
+            <input type="text" name="score" id="score" class="border border-2 border-dark p-1 mb-3" placeholder="Your score">
+          </form>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="border border-2 border-dark p-1">Submit</button>
+          </div>
         </div>
       </div>
     </div>
