@@ -8,10 +8,10 @@ module.exports = {
       import: './src/index.js',
       dependOn: 'shared',
     },
-    // another: {
-    //   import: './src/another-module.js',
-    //   dependOn: 'shared',
-    // },
+    func: {
+      import: './src/func-module.js',
+      dependOn: 'shared',
+    },
     shared: 'lodash',
   },
   devServer: {
@@ -39,5 +39,8 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 };
