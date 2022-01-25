@@ -60,9 +60,10 @@ Finally, show the project through the browser with this command:
 
 ### Usage
 
-There is no functionalities in the project, only what is shown at first sight.
-New functionalities will come later.
-
+To add a new score to the leaderboard: 
+1. Put a `name` in the `top text input`.
+2. Put a `number` in the `lower text input`.
+3. Press the `submit button`.
 ## Author
 
 👤 David Vergaray
