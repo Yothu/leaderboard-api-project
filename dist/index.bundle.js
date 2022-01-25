@@ -109,19 +109,30 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/func-module.js":
+/*!****************************!*\
+  !*** ./src/func-module.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"cleanForms\": () => (/* binding */ cleanForms),\n/* harmony export */   \"appendElementToLeaderboard\": () => (/* binding */ appendElementToLeaderboard),\n/* harmony export */   \"createLeaderboardListElement\": () => (/* binding */ createLeaderboardListElement)\n/* harmony export */ });\nconst createLeaderboardListElement = (newName, newScore) => {\n  const scoreContainer = document.createElement('li');\n  scoreContainer.classList.add('ps-3', 'py-1');\n\n  const scoreText = document.createElement('p');\n  scoreText.classList.add('name', 'm-0');\n\n  const text = document.createTextNode(`${newName}: ${newScore}`);\n  scoreText.appendChild(text);\n\n  scoreContainer.appendChild(scoreText);\n\n  return scoreContainer;\n}\n\nconst appendElementToLeaderboard = (elem) => {\n  const leaderboard = document.querySelector('.score-list');\n  leaderboard.appendChild(elem);\n}\n\nconst cleanForms = () => {\n  document.getElementById('name-form').value = '';\n  document.getElementById('score-form').value = '';  \n}\n\n\n\n\n//# sourceURL=webpack://leaderboard-api-project/./src/func-module.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://leaderboard-api-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _func_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./func-module */ \"./src/func-module.js\");\n\n\n\nconst addScoreBtn = document.getElementById('add-score-button');\n\naddScoreBtn.addEventListener('click', () => {\n  const newName = document.getElementById('name-form').value;\n  const newScore = document.getElementById('score-form').value;\n\n  const scoreElement = (0,_func_module__WEBPACK_IMPORTED_MODULE_1__.createLeaderboardListElement)(newName, newScore);\n\n  (0,_func_module__WEBPACK_IMPORTED_MODULE_1__.appendElementToLeaderboard)(scoreElement);\n  (0,_func_module__WEBPACK_IMPORTED_MODULE_1__.cleanForms)();\n});\n\n\n//# sourceURL=webpack://leaderboard-api-project/./src/index.js?");
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./src/index.js"));
+/******/ __webpack_require__.O(0, ["shared"], () => (__webpack_exec__("./src/index.js")));
+/******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
