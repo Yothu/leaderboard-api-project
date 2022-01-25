@@ -11,16 +11,16 @@ const createLeaderboardListElement = (newName, newScore) => {
   scoreContainer.appendChild(scoreText);
 
   return scoreContainer;
-}
+};
 
 const appendElementToLeaderboard = (elem) => {
   const leaderboard = document.querySelector('.score-list');
   leaderboard.appendChild(elem);
-}
+};
 
 const cleanForms = () => {
   document.getElementById('name-form').value = '';
-  document.getElementById('score-form').value = '';  
-}
+  document.getElementById('score-form').value = '';
+};
 
 export { cleanForms, appendElementToLeaderboard, createLeaderboardListElement };

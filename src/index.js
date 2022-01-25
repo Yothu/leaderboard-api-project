@@ -1,9 +1,9 @@
 import './style.css';
-import { 
+import {
   createLeaderboardListElement,
   cleanForms,
   appendElementToLeaderboard,
- } from './func-module';
+} from './func-module';
 
 const addScoreBtn = document.getElementById('add-score-button');
 
