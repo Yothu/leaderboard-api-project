@@ -1,42 +1,67 @@
 # LEADERBOARD API - PROJECT
 
-> Description the project.
+> Basic leaderboard that ranks based on scores.
+> Project created to practice the use of Gitflow.
 
 
 ## Built With
 
+#### Languages:
+
 - HTML
 - CSS
 - JavaScript
+
+#### Technologies:
+
 - Bootstrap
 - Webpack
 
-## Live Demo
+<!-- ## Live Demo -->
 
-[Live Demo Link](https://livedemo.com)
+<!-- [Live Demo Link](https://livedemo.com) -->
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-### Setup
+You need to be able to use Node Package Manager, or also called, the `npm` command.
+If you dont have it, install it with these commands in the CLI (for Linux):
 
+`curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
+
+`sudo apt install nodejs`
+
+Then, run this command in the CLI:
+
+`npm --version`
+
+If the previous command prints a single line with a version number on screen, `npm` was installed.
 ### Install
+
+First you need to clone the repository into the folder of your choice with this command:
+
+`git clone https://github.com/Yothu/leaderboard-api-project.git`
+
+Then go inside the repository foler with this command:
+
+`cd leaderboard-api-project`
+
+After you are inside, download the `npm` dependecies with this command:
+
+`npm install`
+
+Finally, show the project through the browser with this command:
+
+`npm start`
 
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+There is no functionalities in the project, only what is shown at first sight.
+New functionalities will come later.
 
 ## Author
 
@@ -46,10 +71,11 @@ To get a local copy up and running follow these simple example steps.
 - Twiter:   [@Daivhy](https://twitter.com/Daivhy)
 - LinkedIn: [David Vergaray](https://www.linkedin.com/in/david-vergaray-almontes-051a11127/)
 
-## Show your support
-
-Give a ⭐️ if you like this project!
 
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+## Show your support
+
+Give a ⭐️ if you like this project!
