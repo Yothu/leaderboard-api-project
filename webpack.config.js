@@ -12,6 +12,10 @@ module.exports = {
       import: './src/func-module.js',
       dependOn: 'shared',
     },
+    api: {
+      import: './src/api-module.js',
+      dependOn: 'shared',
+    },
     shared: 'lodash',
   },
   devServer: {

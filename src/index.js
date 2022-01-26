@@ -5,6 +5,8 @@ import {
   appendElementToLeaderboard,
 } from './func-module';
 
+// import * from './api-module';
+
 const addScoreBtn = document.getElementById('add-score-button');
 
 addScoreBtn.addEventListener('click', () => {
