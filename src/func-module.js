@@ -18,9 +18,30 @@ const appendElementToLeaderboard = (elem) => {
   leaderboard.appendChild(elem);
 };
 
+const deleteAllScoresFromLeaderboard = () => {
+  const leaderboard = document.querySelector('.score-list');
+  for (let i = leaderboard.childElementCount - 1; i >= 0; i -= 1) {
+    leaderboard.children[i].remove();
+  }
+};
+
+const createLeaderboardFromAPIResult = (scoresArray) => {
+  deleteAllScoresFromLeaderboard();
+  for (let i = 0; i < scoresArray.length; i += 1) {
+    const scoreElement = createLeaderboardListElement(scoresArray[i].user, scoresArray[i].score);
+
+    appendElementToLeaderboard(scoreElement);
+  }
+};
+
 const cleanForms = () => {
   document.getElementById('name-form').value = '';
   document.getElementById('score-form').value = '';
 };
 
-export { cleanForms, appendElementToLeaderboard, createLeaderboardListElement };
+export {
+  cleanForms,
+  appendElementToLeaderboard,
+  createLeaderboardListElement,
+  createLeaderboardFromAPIResult,
+};

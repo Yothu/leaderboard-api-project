@@ -1,8 +1,7 @@
 # LEADERBOARD API - PROJECT
 
 > Basic leaderboard that ranks based on scores.
-> Project created to practice the use of Gitflow.
-
+> Project created to practice the use of Gitflow and the use of APIs.
 
 ## Built With
 
@@ -60,10 +59,13 @@ Finally, show the project through the browser with this command:
 
 ### Usage
 
+Once you are in the browser with the page shown:
+
 To add a new score to the leaderboard: 
 1. Put a `name` in the `top text input`.
 2. Put a `number` in the `lower text input`.
-3. Press the `submit button`.
+3. Press the `submit button`, and a new score will be added to the leaderboard.
+4. Press the `refresh button`, and all the scores storaged in the API will show in the leaderboard.
 ## Author
 
 👤 David Vergaray
