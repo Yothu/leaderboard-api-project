@@ -33,6 +33,13 @@ const createLeaderboardFromAPIResult = (scoresArray) => {
   }
 };
 
+const inputsAreAcceptable = (newName, newScore) => {
+  if (/^[a-zA-Z]/.test(newName) && /^\d+$/.test(newScore)) {
+    return true;
+  }
+  return false;
+};
+
 const cleanForms = () => {
   document.getElementById('name-form').value = '';
   document.getElementById('score-form').value = '';
@@ -43,4 +50,5 @@ export {
   appendElementToLeaderboard,
   createLeaderboardListElement,
   createLeaderboardFromAPIResult,
+  inputsAreAcceptable,
 };

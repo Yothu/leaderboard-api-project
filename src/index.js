@@ -4,6 +4,7 @@ import {
   createLeaderboardListElement,
   cleanForms,
   appendElementToLeaderboard,
+  inputsAreAcceptable,
 } from './func-module.js';
 
 import { getScoresFromAPI, setScoresToAPI } from './api-module.js';
@@ -22,12 +23,17 @@ addScoreBtn.addEventListener('click', () => {
   const newName = document.getElementById('name-form').value;
   const newScore = document.getElementById('score-form').value;
 
-  setScoresToAPI(newName, newScore);
-
-  const scoreElement = createLeaderboardListElement(newName, newScore);
-
-  appendElementToLeaderboard(scoreElement);
-  cleanForms();
+  if (inputsAreAcceptable(newName, newScore)) {
+    setScoresToAPI(newName, newScore);
+    const scoreElement = createLeaderboardListElement(newName, newScore);
+    appendElementToLeaderboard(scoreElement);
+    cleanForms();
+    const errorContainer = document.getElementById('error-container');
+    errorContainer.classList.add('d-none');
+  } else {
+    const errorContainer = document.getElementById('error-container');
+    errorContainer.classList.remove('d-none');
+  }
 });
 
 refreshBtn.addEventListener('click', () => getScoresFromAPI());

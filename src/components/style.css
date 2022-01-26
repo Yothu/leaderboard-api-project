@@ -2,6 +2,8 @@
   --orange: #ff6b00;
   --light-black: #3c3a39;
   --black: #1c1a19;
+  --red: #f00;
+  --ultra-light-red: #fa9898;
 }
 
 /* inter-regular - latin */
@@ -20,7 +22,8 @@
 }
 
 .whole-page {
-  height: 100vh;
+  min-height: 100vh !important;
+  height: 100%;
 }
 
 .font-20px {
@@ -29,6 +32,10 @@
 
 .bg-black {
   background-color: var(--black);
+}
+
+.bg-xxl-red {
+  background-color: var(--ultra-light-red);
 }
 
 .bg-light-black {
@@ -54,6 +61,14 @@
 .box {
   border: 2px solid var(--orange);
   font-family: Inter, sans-serif;
+}
+
+.border-orange {
+  border-color: var(--orange) !important;
+}
+
+.border-red {
+  border-color: var(--red) !important;
 }
 
 .box:empty {

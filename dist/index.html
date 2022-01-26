@@ -34,14 +34,18 @@
             <ul class="score-list box list-unstyled"></ul>
           </div>
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-6 d-flex flex-column">
           <h2 class="text-white">Add your score</h2>
           <form class="d-flex flex-column py-3">
-            <input type="text" name="name" id="name-form" class="border border-2 border-dark fst-italic font-20px p-1 mb-3" placeholder="Your name">
-            <input type="text" name="score" id="score-form" class="border border-2 font-20px fst-italic border-dark p-1 mb-3" placeholder="Your score">
+            <input type="text" name="name" id="name-form" class="border border-2 border-orange fst-italic font-20px p-1 mb-3" placeholder="Your name">
+            <input type="text" name="score" id="score-form" class="border border-2 border-orange font-20px fst-italic p-1 mb-3" placeholder="Your score">
           </form>
           <div class="d-flex justify-content-end">
             <button id="add-score-button" type="submit" class="border text-white fw-bolder font-20px border-2 border-dark p-2 bg-orange font-inter button-style">Submit</button>
+          </div>
+          <div id="error-container" class="border border-2 border-red p-3 bg-xxl-red align-self-start d-none">
+            <p class="p-1 m-0"><b>Name</b> must contain only <b>letters</b>.</p>
+            <p class="p-1 m-0"><b>Score</b> must contain only <b>numbers</b>.</p>
           </div>
         </div>
       </div>
