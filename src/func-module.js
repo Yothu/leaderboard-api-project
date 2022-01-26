@@ -3,10 +3,9 @@ const createLeaderboardListElement = (newName, newScore) => {
   scoreContainer.classList.add('ps-3', 'py-1');
 
   const scoreText = document.createElement('p');
-  scoreText.classList.add('name', 'm-0');
+  scoreText.classList.add('name', 'm-0', 'font-inter', 'font-20px');
 
-  const text = document.createTextNode(`${newName}: ${newScore}`);
-  scoreText.appendChild(text);
+  scoreText.innerHTML = `<b>${newName}</b>: ${newScore}`;
 
   scoreContainer.appendChild(scoreText);
 

@@ -4,35 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- favicon.ico error fix -->
+  <link rel="shortcut icon" href="#">
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet" crossorigin="anonymous">
   <title>Leaderboard</title>
 <script defer src="index.bundle.js"></script><script defer src="func.bundle.js"></script><script defer src="api.bundle.js"></script><script defer src="runtime.bundle.js"></script><script defer src="shared.bundle.js"></script></head>
 
 <body>
-  <div class="whole-page">
-    <div class="p-3">
-      <h1 class="display-4 fw-bolder">Leaderboard</h1>
+  <div class="whole-page bg-black">
+    <div id="top-header" class="p-3 bg-light-black d-flex justify-content-between px-5 align-items-center">
+      <h1 class="display-4 fw-bolder text-white m-0">Leaderboard</h1>
+      <img src="./components/images/logo.svg" alt="">
     </div>
-    <div class="container">
+    <div class="container-fluid pt-4 px-5">
       <div class="row">
-        <div class="col">
+        <div class="col-12 col-sm-6">
           <div class="d-flex align-items-center justify-content-between">
-            <h2>Recent scores</h2>
-            <button id="refresh-button" type="button" class="p-1 border border-2 border-dark">Refresh</button>
+            <h2 class="text-white">Recent scores</h2>
+            <button id="refresh-button" type="button" class="p-2 text-white border fw-bolder font-20px border-2 border-dark font-inter bg-orange button-style">Refresh</button>
           </div>
           <div class="score-list-container py-3">
-            <ul class="score-list border border-2 border-dark list-unstyled"></ul>
+            <ul class="score-list box list-unstyled"></ul>
           </div>
         </div>
-        <div class="col">
-          <h2>Add your score</h2>
+        <div class="col-12 col-sm-6">
+          <h2 class="text-white">Add your score</h2>
           <form class="d-flex flex-column py-3">
-            <input type="text" name="name" id="name-form" class="border border-2 border-dark p-1 mb-3" placeholder="Your name">
-            <input type="text" name="score" id="score-form" class="border border-2 border-dark p-1 mb-3" placeholder="Your score">
+            <input type="text" name="name" id="name-form" class="border border-2 border-dark fst-italic font-20px p-1 mb-3" placeholder="Your name">
+            <input type="text" name="score" id="score-form" class="border border-2 font-20px fst-italic border-dark p-1 mb-3" placeholder="Your score">
           </form>
           <div class="d-flex justify-content-end">
-            <button id="add-score-button" type="submit" class="border border-2 border-dark p-1">Submit</button>
+            <button id="add-score-button" type="submit" class="border text-white fw-bolder font-20px border-2 border-dark p-2 bg-orange font-inter button-style">Submit</button>
           </div>
         </div>
       </div>

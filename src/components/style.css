@@ -1,0 +1,66 @@
+:root {
+  --orange: #ff6b00;
+  --light-black: #3c3a39;
+  --black: #1c1a19;
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/inter-v7-latin-regular.eot");
+  src:
+    local(""),
+    url("./fonts/inter-v7-latin-regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/inter-v7-latin-regular.woff2") format("woff2"),
+    url("./fonts/inter-v7-latin-regular.woff") format("woff"),
+    url("./fonts/inter-v7-latin-regular.ttf") format("truetype"),
+    url("./fonts/inter-v7-latin-regular.svg#Inter") format("svg");
+}
+
+.whole-page {
+  height: 100vh;
+}
+
+.font-20px {
+  font-size: 20px;
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-light-black {
+  background-color: var(--light-black);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.font-inter {
+  font-family: Inter, sans-serif;
+}
+
+.score-list > li:nth-child(even) {
+  background-color: #ddd;
+}
+
+.score-list > li:nth-child(odd) {
+  background-color: #fff;
+}
+
+.box {
+  border: 2px solid var(--orange);
+  font-family: Inter, sans-serif;
+}
+
+.box:empty {
+  border: none;
+}
+
+.button-style {
+  /* background-color: var(--orange);
+  border-radius: 10px; */
+}
