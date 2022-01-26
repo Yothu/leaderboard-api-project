@@ -3,10 +3,9 @@ const createLeaderboardListElement = (newName, newScore) => {
   scoreContainer.classList.add('ps-3', 'py-1');
 
   const scoreText = document.createElement('p');
-  scoreText.classList.add('name', 'm-0');
+  scoreText.classList.add('name', 'm-0', 'font-inter', 'font-20px');
 
-  const text = document.createTextNode(`${newName}: ${newScore}`);
-  scoreText.appendChild(text);
+  scoreText.innerHTML = `<b>${newName}</b>: ${newScore}`;
 
   scoreContainer.appendChild(scoreText);
 
@@ -34,6 +33,13 @@ const createLeaderboardFromAPIResult = (scoresArray) => {
   }
 };
 
+const inputsAreAcceptable = (newName, newScore) => {
+  if (/^[a-zA-Z]/.test(newName) && /^\d+$/.test(newScore)) {
+    return true;
+  }
+  return false;
+};
+
 const cleanForms = () => {
   document.getElementById('name-form').value = '';
   document.getElementById('score-form').value = '';
@@ -44,4 +50,5 @@ export {
   appendElementToLeaderboard,
   createLeaderboardListElement,
   createLeaderboardFromAPIResult,
+  inputsAreAcceptable,
 };
